@@ -17,9 +17,21 @@
  * under the License.
  */
 var app = {
+
+    loadMapsApi : function  () {
+            if(navigator.connection.type === Connection.NONE || google.maps) {
+            return;
+            }
+            $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCzJjz5qR_rudEDjEU3YLQglNffw7UpUnk&sensor=true&callback=onMapsApiLoaded');
+            },
+
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.addEventListener("online", this.onOnline.bind(this), false);
+        document.addEventListener("resume", this.onResume.bind(this), false);
+
+        loadMapsApi();
     },
 
     // deviceready Event Handler
@@ -28,6 +40,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        loadMapsApi();
     },
 
     // Update DOM on a Received Event
@@ -40,7 +53,21 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+
+
+       onOnline :     function  () {
+       this.receivedEvent('online');
+                loadMapsApi();
+                },
+
+          onResume:      function  () {
+          this.receivedEvent('resume');
+                loadMapsApi();
+                }
+
 };
 
 app.initialize();
+
+
