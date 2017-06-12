@@ -74,7 +74,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/android-profile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
@@ -99,6 +98,13 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="play-services-base-9.8.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-tasks-9.8.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-location-9.8.0" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-24.0.0" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-24.0.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-maps-9.8.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-basement-9.8.0" level="project" />
     <orderEntry type="module" module-name="CordovaLib" exported="" />
     <orderEntry type="library" exported="" name="android-android-25" level="project" />
   </component>
